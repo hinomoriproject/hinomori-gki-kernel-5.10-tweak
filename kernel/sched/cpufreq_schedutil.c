@@ -532,11 +532,11 @@ static unsigned int sugov_next_freq_shared(struct sugov_cpu *sg_cpu, u64 time)
 		}
 	}
 
-		/* Hinomori tweak: binary aggressive scaling */
-	if (util > 0) {
+			/* Hinomori tweak: threshold-based aggressive scaling */
+	if (util * 100 > max * 35) {
 		return policy->cpuinfo.max_freq;
 	}
-	return policy->cpuinfo.min_freq;
+	return get_next_freq(sg_policy, util, max);
 }
 
 static void
