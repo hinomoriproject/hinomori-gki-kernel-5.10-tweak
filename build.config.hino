@@ -1,0 +1,5 @@
+. ${ROOT_DIR}/common/build.config.gki.aarch64
+POST_DEFCONFIG_CMDS=""
+KMI_SYMBOL_LIST_STRICT_MODE=0
+export KBUILD_BUILD_USER=Hinomori
+export KBUILD_BUILD_HOST=Project

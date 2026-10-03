@@ -125,6 +125,11 @@ config CPU_FREQ_GOV_PERFORMANCE
 
 	  If in doubt, say Y.
 
+config CPU_FREQ_GOV_TURBO
+	tristate "turbo cpufreq governor"
+	help
+	  Kunci frekuensi CPU ke target tinggi dengan re-assert dan thermal guard (Hinomori Project).
+
 config CPU_FREQ_GOV_POWERSAVE
 	tristate "'powersave' governor"
 	help
